@@ -19,6 +19,9 @@ Log Ingestion → Claude AI Analysis → MITRE Mapping → Escalation Logic → 
 ---
 
 ## Sample Alert Output
+## Live Demo
+
+![Delta Force SOC Discord Alert](demo/scenarios/Discord_Delta_Force_SOC.png)
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 DELTA FORCE SOC — INCIDENT REPORT
