@@ -23,6 +23,12 @@ Log Ingestion → Claude AI Analysis → MITRE Mapping → Escalation Logic → 
 
 ![Delta Force SOC Discord Alert](demo/scenarios/Discord_Delta_Force_SOC.png)
 
+### n8n AI Pipeline
+![n8n Pipeline](demo/screenshots/n8n-workflow.png)
+
+### IF Node Threat Filtering
+![IF Node Filtering](demo/screenshots/IF_Node_Filtering.png)
+
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 DELTA FORCE SOC — INCIDENT REPORT
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
