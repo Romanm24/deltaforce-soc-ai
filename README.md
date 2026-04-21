@@ -1,66 +1,99 @@
 # Delta Force AI SOC Platform
 
-An AI-powered Security Operations Center (SOC) platform for automated threat detection, triage, and response.
+> AI-powered Security Operations Center with automated threat detection, MITRE ATT&CK mapping, and real-time Discord alerting.
 
-## Project Structure
+---
 
-```
-deltaforce-soc-ai/
-├── ai-engine/              # Core AI/ML engine components
-│   ├── models/             # Trained models and model configs
-│   ├── prompts/            # LLM prompt templates
-│   ├── chains/             # LangChain / agent chains
-│   └── tools/              # AI tool integrations
-│
-├── workflows/              # Automated SOC workflows
-│   ├── triage/             # Alert triage automation
-│   ├── escalation/         # Escalation logic and rules
-│   ├── response/           # Automated response actions
-│   └── playbooks/          # Incident response playbooks
-│
-├── detection/              # Threat detection layer
-│   ├── rules/              # Detection rules (SIGMA, Yara, etc.)
-│   ├── signatures/         # Malware and IOC signatures
-│   ├── ml-models/          # ML-based detection models
-│   └── feeds/              # Threat intelligence feed configs
-│
-├── dashboards/             # Visualization and reporting
-│   ├── analyst/            # SOC analyst dashboards
-│   ├── executive/          # Executive/CISO dashboards
-│   └── threat-intel/       # Threat intelligence dashboards
-│
-├── install/                # Installation and deployment
-│   ├── scripts/            # Setup and install scripts
-│   ├── configs/            # Environment configuration files
-│   └── docker/             # Docker / container definitions
-│
-├── demo/                   # Demo and evaluation resources
-│   ├── scenarios/          # Demo attack scenarios
-│   ├── data/               # Sample data and logs
-│   └── screenshots/        # UI screenshots and recordings
-│
-└── architecture/           # Architecture documentation
-    ├── diagrams/            # System and data flow diagrams
-    ├── docs/               # Architecture documentation
-    └── decisions/          # Architecture Decision Records (ADRs)
-```
+## What This Does
 
-## Overview
+Delta Force SOC automatically ingests security logs, analyzes them using Claude AI, maps threats to the MITRE ATT&CK framework, and delivers structured incident reports to your team in real time.
 
-The Delta Force AI SOC Platform combines large language models, machine learning, and automation to accelerate security operations — reducing mean time to detect (MTTD) and mean time to respond (MTTR).
+**This is not a demo. This is a working pipeline.**
+
+---
+
+## Live Pipeline
+
+Log Ingestion → Claude AI Analysis → MITRE Mapping → Escalation Logic → Discord Alert
+
+---
+
+## Sample Alert Output
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+DELTA FORCE SOC — INCIDENT REPORT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ID:           DF-1745256832941
+TIMESTAMP:    2026-04-21T16:45:51Z
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SEVERITY:     MEDIUM | CONFIDENCE: High
+ATTACK:       Brute Force / Credential Attack
+KILL CHAIN:   Reconnaissance/Weaponization
+ESCALATE:     Yes
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SOURCE IP:    192.168.0.239
+PROTOCOL:     SSH2
+ASSET:        SSH service on port 22
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+MITRE TACTIC:     Initial Access
+MITRE TECHNIQUE:  T1110.001 - Brute Force
+FALSE POSITIVE:   Low
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+DETECTION ENGINE:
+Pipeline: Schedule Trigger > File Ingest > Claude AI > Parser > Discord
+
+---
+
+## Tech Stack
+
+| Layer | Tool |
+|-------|------|
+| AI Analysis | Claude AI (Anthropic) |
+| Automation | n8n workflows |
+| Alerting | Discord webhooks |
+| Agent System | VS Code + Claude Code |
+| Version Control | GitHub |
+| Languages | JavaScript, Python |
+
+---
 
 ## Key Capabilities
 
-- **AI-Powered Triage** — Automated alert scoring and prioritization
-- **Threat Detection** — Rule-based and ML-driven detection across endpoints, network, and cloud
-- **Automated Response** — Playbook-driven containment and remediation
-- **Threat Intelligence** — Real-time IOC enrichment and feed aggregation
-- **Executive Reporting** — Auto-generated dashboards and threat briefings
+- AI-powered threat analysis with severity scoring
+- MITRE ATT&CK tactic and technique mapping
+- Kill chain phase identification
+- Confidence scoring and false positive assessment
+- Automated escalation based on attempt count
+- Real-time Discord alerts with full incident reports
+- Unique workflow ID per incident for tracking
 
-## Getting Started
+---
 
-See `install/` for setup scripts and configuration guides.
+## Deployment
 
-## License
+Currently deployed in a sandboxed cyber lab environment. Pilot campus deployment in progress.
 
-Proprietary — Delta Force AI SOC Platform
+---
+
+## Project Status
+
+- [x] Core AI pipeline
+- [x] Discord alerting
+- [x] MITRE ATT&CK mapping
+- [x] Escalation logic
+- [x] GitHub documentation
+- [ ] Campus pilot deployment
+- [ ] Dashboard UI
+- [ ] Multi-source log ingestion
+
+---
+
+## Built By
+
+Roman Mares — Cybersecurity student, SOC engineer, AI automation builder.
+
+*Currently seeking pilot deployments at educational institutions and small businesses.*
+
+---
+
+**License:** Proprietary — Delta Force AI SOC Platform
