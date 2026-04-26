@@ -4,7 +4,7 @@
 - **Project:** Delta Force AI SOC Platform
 - **Company:** Delta Force Security LLC
 - **Owner:** Roman Mares — Cybersecurity Engineer & AI SOC Builder
-- **Email:** Roman.mares2012@gmail.com
+- **Email:** roman@deltaforcesecurity.io
 - **Live Dashboard:** https://romanm24.github.io/deltaforce-soc-ai
 - **Repos:** `deltaforce-soc-ai` (main platform), `soc-command-center` (agent system + automation)
 
